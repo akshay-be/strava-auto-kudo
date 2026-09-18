@@ -1,0 +1,10 @@
+Strava Auto-Kudo run at 2026-09-17_14-57-01
+
+========== Summary ==========
+Pages fetched          : 0
+Total entries seen     : 0
+Already kudoed         : 0
+Kudos given   : 0
+Kudos failed           : 0
+Error                  : SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+=============================
