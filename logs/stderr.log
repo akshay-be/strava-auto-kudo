@@ -1,0 +1,3 @@
+Exception in thread "main" java.lang.RuntimeException: No -b '<cookies>' found in auth.curl
+	at AutoKudo.loadAuth(AutoKudo.java:53)
+	at AutoKudo.main(AutoKudo.java:109)

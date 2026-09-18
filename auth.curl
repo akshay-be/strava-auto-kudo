@@ -12,6 +12,4 @@
 
 curl --url 'https://www.strava.com/dashboard/feed?feed_type=following&cursor=1789284434952' \
   -H 'sec-ch-ua-platform: "macOS"' \
-  -H 'X-CSRF-Token: HxrvTV8Q1Y_77Q-2LGlSQ1vRWQnUVGVzbqQ7K-wLpxcVmmMyi8m_3a92pI85D9cF9kLLF6tsqrGhVjiFKFpmVw' \
-  -b '_strava_cpra=opted_out; sp=2b6c5612-c2da-41ed-be98-0cc9fcd60a79; strava_remember_id=11795000; strava_remember_token=eyJzaWduaW5nX2tleSI6InYxIiwiZW5jcnlwdGlvbl9rZXkiOiJ2MSIsIml2IjoiQU1SVFovQmhnSmlyU0N0R0JZTkY3UT09XG4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uc3RyYXZhLmF0aGxldGVzIiwic3ViIjoiMTE3OTUwMDAiLCJpYXQiOjE3ODg5NjY1MDEsImV4cCI6MTc5MTU1ODUwMSwiZW1haWwiOiJwakJyRHU2YmFLWUJWVnNYbU5oOXA2cmlqcytxYnFRZWFMa0dZUkZ0NWJsVzJsSmkxMm9hc08yZ0lvOW1cbk5NUlpjSG5yN05ueTAzRHNxNVRwaWtLdFJINmZNd1VXbUJqQmFkS2ZFQ2EvakdrPVxuIn0.vYtOL-YM6rnxmraHsapSHYvnr8OcTD4EXvKRaRuLNTs; _strava4_session=8s3uksdcp3kn7lhltb86g9f36uf86fjo' \
-  -H 'Referer: https://www.strava.com/dashboard'
+
