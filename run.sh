@@ -43,15 +43,22 @@ done
 if [ "$PROXY_OK" = "1" ]; then
     JAVA_PROXY_ARGS="-Dhttps.proxyHost=proxy-intlho.wal-mart.com -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy-intlho.wal-mart.com -Dhttp.proxyPort=8080"
     echo "Using corp proxy proxy-intlho.wal-mart.com:8080"
+    exec /usr/bin/env java \
+        $JAVA_PROXY_ARGS \
+        -Djavax.net.ssl.trustStoreType=KeychainStore \
+        -Djavax.net.ssl.trustStore=NONE \
+        -cp "$OUT" AutoKudo --max-pages 15 "$@"
 elif /usr/bin/curl -sS --max-time 8 -o /dev/null https://www.strava.com/ 2>/dev/null; then
     echo "Corp proxy unreachable; going direct"
+    exec /usr/bin/env java \
+        -cp "$OUT" AutoKudo --max-pages 15 "$@"
 else
     echo "No network to Strava. Aborting."
-    exit 0
+#    exit 0
 fi
 
-exec /usr/bin/env java \
-    $JAVA_PROXY_ARGS \
-    -Djavax.net.ssl.trustStoreType=KeychainStore \
-    -Djavax.net.ssl.trustStore=NONE \
-    -cp "$OUT" AutoKudo --max-pages 15 "$@"
+#exec /usr/bin/env java \
+#    $JAVA_PROXY_ARGS \
+#    -Djavax.net.ssl.trustStoreType=KeychainStore \
+#    -Djavax.net.ssl.trustStore=NONE \
+#    -cp "$OUT" AutoKudo --max-pages 15 "$@"
